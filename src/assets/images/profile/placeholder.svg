@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 540" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#141e33"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#38bdf8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="440" height="540" rx="16" fill="url(#bgGrad)"/>
+  <rect width="440" height="540" rx="16" fill="url(#grid)"/>
+  <circle cx="220" cy="220" r="180" fill="url(#glow)"/>
+
+  <!-- Outer Layered Precision Frame -->
+  <rect x="2" y="2" width="436" height="536" rx="15" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+  <!-- Technical Corner Align Marks -->
+  <path d="M 20 36 L 20 20 L 36 20" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 420 36 L 420 20 L 404 20" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 20 504 L 20 520 L 36 520" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 420 504 L 420 520 L 404 520" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Elegant Silhouette / Portrait Target -->
+  <g opacity="0.85">
+    <circle cx="220" cy="190" r="68" fill="#17233d" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5"/>
+    <path d="M 120 395 C 120 310, 165 275, 220 275 C 275 275, 320 310, 320 395" fill="#17233d" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5"/>
+    <!-- Subtle technical rings around headshot -->
+    <circle cx="220" cy="190" r="82" stroke="#38bdf8" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Technical Overlay HUD Elements -->
+  <rect x="36" y="440" width="368" height="56" rx="8" fill="#080d1a" fill-opacity="0.8" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="56" cy="468" r="4" fill="#10b981"/>
+  <text x="70" y="464" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="0.02em">
+    PORTRAIT ASSET PLACEHOLDER
+  </text>
+  <text x="70" y="482" fill="#7e8c9f" font-family="'JetBrains Mono', monospace" font-size="10">
+    Drop image into /src/assets/images/profile/
+  </text>
+</svg>

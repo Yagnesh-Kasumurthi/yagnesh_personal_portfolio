@@ -1,0 +1,91 @@
+/**
+ * Skills Section Editorial Styles
+ * Dark navy cards on warm paper, subtle glow, and clean tech chips
+ */
+
+.skills-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.skill-editorial-card {
+  background-color: var(--color-primary-navy);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 1.4rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(11, 27, 43, 0.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-editorial-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-blue-sky);
+  box-shadow: 0 12px 32px rgba(11, 27, 43, 0.35), 0 0 16px rgba(56, 189, 248, 0.15);
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-card-title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.skill-chips-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.skill-editorial-chip {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all var(--transition-fast);
+}
+
+.skill-editorial-chip:hover {
+  background-color: rgba(56, 189, 248, 0.18);
+  border-color: var(--color-blue-sky);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 960px) {
+  .skills-editorial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-editorial-grid {
+    grid-template-columns: 1fr;
+  }
+}

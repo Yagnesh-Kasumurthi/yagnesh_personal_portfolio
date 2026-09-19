@@ -1,0 +1,230 @@
+/**
+ * Resume Section Editorial Styles
+ */
+
+.resume-editorial-card {
+  background: #ffffff;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(17, 24, 39, 0.08);
+  box-shadow: var(--shadow-paper-elevated);
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  position: relative;
+}
+
+.resume-narrative-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-official-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-blue-tech);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: var(--spacing-md);
+}
+
+.dot-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-blue-tech);
+}
+
+.resume-headline {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: var(--line-height-snug);
+  margin-bottom: var(--spacing-sm);
+}
+
+.resume-summary-text {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-lg);
+}
+
+.resume-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.55rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.resume-highlight-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-text-dark);
+  background: var(--color-paper-secondary);
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  border: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+.resume-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+/* Right Mockup */
+.resume-mockup-frame {
+  background: #ffffff;
+  border: 1px solid rgba(17, 24, 39, 0.15);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(17, 24, 39, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.mockup-top-bar {
+  background: #faf7f2;
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.mockup-dots .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.mockup-dots .red { background: #ef4444; }
+.mockup-dots .yellow { background: #f59e0b; }
+.mockup-dots .green { background: #10b981; }
+
+.mockup-file-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+.mockup-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.mockup-iframe-container {
+  position: relative;
+  height: 340px;
+  width: 100%;
+  background: #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mockup-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+}
+
+.mockup-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 27, 43, 0.4);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.mockup-iframe-container:hover .mockup-hover-overlay {
+  opacity: 1;
+}
+
+.mockup-overlay-badge {
+  background: #ffffff;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mockup-bottom-bar {
+  background: #faf7f2;
+  padding: 0.55rem 0.9rem;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mockup-file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-dim);
+}
+
+.mockup-quick-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-blue-tech);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .resume-editorial-card {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-xl);
+  }
+
+  .resume-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}

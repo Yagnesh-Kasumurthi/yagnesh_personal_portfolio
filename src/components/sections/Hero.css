@@ -1,0 +1,409 @@
+/**
+ * Hero Section Editorial Styles
+ * Modern editorial engineering poster composition
+ */
+
+.hero-section {
+  padding-top: calc(var(--spacing-3xl) + 1rem);
+  padding-bottom: var(--spacing-3xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: var(--spacing-3xl);
+  position: relative;
+}
+
+/* ========================================================
+ * Left Column: Editorial Headline & Identity
+ * ======================================================== */
+.hero-editorial-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.hero-eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue-tech);
+  margin-bottom: var(--spacing-md);
+  padding: 0.35rem 0.85rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.eyebrow-accent-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-blue-tech);
+}
+
+.hero-editorial-title {
+  font-family: var(--font-editorial);
+  font-size: clamp(2.75rem, 5.2vw, 4.4rem);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--spacing-lg);
+}
+
+.title-serif-italic {
+  font-style: italic;
+  font-weight: 400;
+  color: #1f2937;
+}
+
+.title-highlight {
+  color: var(--color-blue-tech);
+  position: relative;
+  display: inline-block;
+}
+
+.title-highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-orange-warm);
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
+.hero-identity-statement {
+  margin-bottom: var(--spacing-xl);
+  max-width: 540px;
+}
+
+.hero-role-headline {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: -0.01em;
+}
+
+.hero-blue-accent {
+  color: var(--color-blue-tech);
+}
+
+.hero-bio-narrative {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+}
+
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-btn-work {
+  padding: 0.8rem 1.6rem;
+  font-size: 0.9rem;
+}
+
+.hero-btn-resume {
+  padding: 0.8rem 1.6rem;
+  font-size: 0.9rem;
+}
+
+.hero-socials-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+/* ========================================================
+ * Right Column: Poster Composition with Straight Portrait
+ * ======================================================== */
+.hero-editorial-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-poster-frame {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vibrant Blue Paint Wash Splash Backdrop */
+.blue-paint-splash {
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: 320px;
+  height: 340px;
+  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  opacity: 0.92;
+  filter: blur(0.5px);
+  transform: rotate(-6deg);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.25);
+  z-index: 1;
+  transition: transform var(--transition-smooth);
+}
+
+.hero-poster-frame:hover .blue-paint-splash {
+  transform: rotate(-4deg) scale(1.03);
+}
+
+/* Architectural Lines Overlay */
+.architectural-sketch-overlay {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Authentic Photo Card: Straight Front-Facing, Natural */
+.hero-portrait-card {
+  position: relative;
+  z-index: 3;
+  width: 320px;
+  height: 360px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #ffffff;
+  padding: 8px;
+  box-shadow: 
+    0 16px 36px -8px rgba(17, 24, 39, 0.22),
+    0 4px 12px rgba(17, 24, 39, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.hero-portrait-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 22px 48px -10px rgba(17, 24, 39, 0.28),
+    0 8px 16px rgba(17, 24, 39, 0.12);
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: calc(var(--radius-md) - 6px);
+  display: block;
+}
+
+/* Handwritten Margin Note: Build. Learn. Improve. Repeat. */
+.hero-annotation-annotation {
+  position: absolute;
+  left: -42px;
+  top: 25%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.annotation-quote {
+  font-family: var(--font-handwriting);
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: #1e3a5a;
+  text-align: right;
+  font-weight: 600;
+  transform: rotate(-6deg);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.sketch-arrow-curve {
+  margin-top: 4px;
+  margin-right: 8px;
+  transform: rotate(10deg);
+}
+
+/* Yellow Sticky Note */
+.hero-sticky-note {
+  position: absolute;
+  right: -24px;
+  bottom: 0px;
+  z-index: 5;
+  max-width: 190px;
+}
+
+.hero-sticky-note p {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ========================================================
+ * Bottom Strip: Metrics & University Class
+ * ======================================================== */
+.hero-metrics-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--spacing-3xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1.5px solid rgba(17, 24, 39, 0.1);
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.hero-metric-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.metric-number {
+  font-family: var(--font-editorial);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-blue-tech);
+  line-height: 1;
+}
+
+.metric-symbol {
+  font-size: 2.5rem;
+  color: var(--color-text-dark);
+}
+
+.metric-label {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hero-metric-divider {
+  width: 1px;
+  height: 28px;
+  background-color: rgba(17, 24, 39, 0.15);
+}
+
+.hero-metric-affiliation {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+  margin-left: auto;
+}
+
+.affiliation-inst {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: 0.05em;
+}
+
+.affiliation-class {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-blue-tech);
+  font-weight: 600;
+}
+
+/* ========================================================
+ * Responsive Design for Hero
+ * ======================================================== */
+@media (max-width: 1024px) {
+  .hero-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .hero-editorial-visual {
+    order: -1;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-poster-frame {
+    max-width: 360px;
+    min-height: 380px;
+  }
+
+  .hero-portrait-card {
+    width: 280px;
+    height: 320px;
+  }
+
+  .blue-paint-splash {
+    width: 260px;
+    height: 280px;
+  }
+
+  .hero-metrics-strip {
+    justify-content: flex-start;
+  }
+
+  .hero-metric-affiliation {
+    align-items: flex-start;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hero-metric-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-editorial-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-annotation-annotation {
+    left: -10px;
+    top: 15%;
+  }
+
+  .hero-sticky-note {
+    right: -10px;
+    bottom: -15px;
+  }
+
+  .hero-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-btn-work,
+  .hero-btn-resume {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,147 @@
+/**
+ * Hobbies Section Editorial Styles
+ * Artistic motifs with strategic grid, book sketch, brush stroke, route line, waveform
+ */
+
+.hobbies-editorial-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.hobbies-cards-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-md);
+}
+
+.editorial-hobby-card {
+  background: #ffffff;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: var(--shadow-paper);
+  padding: 1.4rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.editorial-hobby-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-paper-elevated);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+.hobby-visual-stage {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Chess Board Miniature Grid */
+.chess-mini-board {
+  display: grid;
+  grid-template-columns: repeat(4, 7px);
+  grid-template-rows: repeat(3, 7px);
+  border: 1px solid #0B1B2B;
+}
+
+.chess-mini-board .square.dark {
+  background-color: #0B1B2B;
+}
+
+.chess-mini-board .square.light {
+  background-color: #ffffff;
+}
+
+.hobby-card-name {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 0.2rem;
+}
+
+.hobby-card-concept {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-dim);
+}
+
+/* Languages Editorial Panel */
+.languages-editorial-panel {
+  background: #ffffff;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: var(--shadow-paper);
+  padding: 1.4rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.languages-headline {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.languages-sub {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
+
+.languages-list-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.language-badge-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-paper-secondary);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.language-name-label {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.language-level-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-blue-tech);
+}
+
+@media (max-width: 1040px) {
+  .hobbies-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hobbies-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .languages-editorial-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

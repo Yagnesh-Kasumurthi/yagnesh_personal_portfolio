@@ -1,0 +1,475 @@
+/**
+ * Editorial Engineering Global Styles & Texture System
+ * Distinct visual environments per section, magazine typography, and interactive button hierarchy.
+ */
+
+/* ========================================================
+ * Root Container & Paper Textures
+ * ======================================================== */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-paper-offwhite);
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.site-main {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================================
+ * Section Environment Definitions
+ * ======================================================== */
+.section {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+}
+
+/* 1. Hero Section: Warm paper + subtle architectural sketch */
+.section-hero {
+  background-color: var(--color-paper-offwhite);
+  background-image: 
+    radial-gradient(#d1d5db 0.75px, transparent 0.75px),
+    linear-gradient(135deg, rgba(245, 241, 232, 1) 0%, rgba(234, 228, 216, 0.6) 100%);
+  background-size: 24px 24px, 100% 100%;
+}
+
+/* 2. About Section: Warm paper + subtle blueprint grain */
+.section-about {
+  background-color: var(--color-paper-secondary);
+  background-image: 
+    linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* 3. Education Section: Crisp off-white paper + architectural line accents */
+.section-education {
+  background-color: var(--color-paper-offwhite);
+  background-image: radial-gradient(rgba(17, 24, 39, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* 4. Projects Section: Off-white paper with engineering millimeter grid */
+.section-projects {
+  background-color: #faf7f0;
+  background-image: 
+    linear-gradient(to right, rgba(17, 24, 39, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 24, 39, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* 5. Currently Building Section: Dark Navy Technical Blueprint / Notebook */
+.section-currently-building {
+  background-color: var(--color-primary-navy);
+  color: var(--color-text-light);
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* 6. Skills Section: Warm paper background with dark navy cards */
+.section-skills {
+  background-color: var(--color-paper-offwhite);
+  background-image: radial-gradient(rgba(37, 99, 235, 0.06) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+}
+
+/* 7. Certifications Section: Warm paper with subtle horizontal notebook rules */
+.section-certifications {
+  background-color: var(--color-paper-secondary);
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    rgba(17, 24, 39, 0.04) 31px,
+    rgba(17, 24, 39, 0.04) 32px
+  );
+}
+
+/* 8. Activities & Hobbies Sections */
+.section-activities,
+.section-hobbies {
+  background-color: var(--color-paper-offwhite);
+}
+
+/* 9. Contact Section: Warm paper with dark accents */
+.section-contact {
+  background-color: #faf7f2;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(249, 115, 22, 0.05) 0%, transparent 40%);
+}
+
+/* 10. Footer Section: Deep Navy Editorial Wrap */
+.section-footer {
+  background-color: var(--color-primary-navy);
+  color: var(--color-text-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================================
+ * Editorial Section Headers
+ * ======================================================== */
+.editorial-section-header {
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+}
+
+.editorial-header--centered {
+  text-align: center;
+}
+
+.editorial-header-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue-tech);
+  margin-bottom: var(--spacing-xs);
+}
+
+.editorial-header--dark .editorial-header-eyebrow {
+  color: var(--color-blue-sky);
+}
+
+.editorial-header-eyebrow .header-num {
+  color: var(--color-blue-tech);
+  font-weight: 700;
+}
+
+.editorial-header--dark .editorial-header-eyebrow .header-num {
+  color: var(--color-blue-sky);
+}
+
+.editorial-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.editorial-title {
+  font-family: var(--font-editorial);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.015em;
+  position: relative;
+}
+
+.editorial-header--dark .editorial-title {
+  color: var(--color-text-light);
+}
+
+.editorial-header-annotation {
+  font-family: var(--font-handwriting);
+  font-size: 1.35rem;
+  color: var(--color-text-muted);
+  transform: rotate(-2deg);
+  user-select: none;
+}
+
+.editorial-header--dark .editorial-header-annotation {
+  color: var(--color-yellow-accent);
+}
+
+.editorial-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-xs);
+  max-width: 660px;
+  line-height: var(--line-height-normal);
+}
+
+.editorial-header--dark .editorial-subtitle {
+  color: var(--color-text-light-muted);
+}
+
+.editorial-header--centered .editorial-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================================
+ * Button Hierarchy System
+ * ======================================================== */
+/* Primary Button: Strong dark navy or electric blue pill */
+.btn-primary,
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background-color: var(--color-primary-navy);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: 0.72rem 1.45rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-primary-navy);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(11, 27, 43, 0.18);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover,
+.btn-cta:hover {
+  background-color: var(--color-blue-tech);
+  border-color: var(--color-blue-tech);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:active,
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button: White/Paper background with dark text */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background-color: #ffffff;
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: 0.72rem 1.45rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #d1d5db;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-paper);
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-paper-secondary);
+  border-color: var(--color-text-dark);
+  color: var(--color-text-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-paper-elevated);
+}
+
+/* Text Button: Minimal with animated arrow & underline */
+.btn-text,
+.editorial-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-blue-tech);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0.2rem 0;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.btn-text::after,
+.editorial-text-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: currentColor;
+  transform: scaleX(0.85);
+  transform-origin: left;
+  transition: transform var(--transition-fast);
+}
+
+.btn-text:hover,
+.editorial-text-link:hover {
+  color: var(--color-orange-warm);
+}
+
+.btn-text:hover::after,
+.editorial-text-link:hover::after {
+  transform: scaleX(1);
+}
+
+.btn-text svg,
+.editorial-text-link svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn-text:hover svg,
+.editorial-text-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Icon Button */
+.btn-icon,
+.editorial-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: var(--color-text-dark);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-icon:hover,
+.editorial-social-btn:hover {
+  background-color: var(--color-primary-navy);
+  border-color: var(--color-primary-navy);
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(11, 27, 43, 0.15);
+}
+
+/* ========================================================
+ * Textures & Annotations
+ * ======================================================== */
+/* Sticky Note Component */
+.sticky-note {
+  position: relative;
+  background: var(--color-yellow-accent);
+  color: #1a1a1a;
+  padding: 1.1rem 1.4rem;
+  border-radius: 2px;
+  box-shadow: var(--shadow-sticky);
+  font-family: var(--font-handwriting);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  transform: rotate(2.5deg);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  user-select: none;
+}
+
+.sticky-note::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 30%;
+  width: 50px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(220, 220, 220, 0.5);
+  transform: rotate(-3deg);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.sticky-note:hover {
+  transform: rotate(0deg) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* Handwritten Margin Notes */
+.handwritten-annotation {
+  font-family: var(--font-handwriting);
+  color: #1e3a5a;
+  line-height: 1.25;
+  user-select: none;
+  display: inline-block;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.handwritten-annotation:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* Status Pills */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-pill--completed {
+  background-color: var(--status-completed-bg);
+  color: var(--status-completed);
+  border: 1px solid var(--status-completed-border);
+}
+
+.status-pill--in-progress {
+  background-color: var(--status-inprogress-bg);
+  color: var(--status-inprogress);
+  border: 1px solid var(--status-inprogress-border);
+}
+
+/* Tech Pills */
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  background: rgba(17, 24, 39, 0.05);
+  color: var(--color-text-dark);
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tech-pill-dark {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

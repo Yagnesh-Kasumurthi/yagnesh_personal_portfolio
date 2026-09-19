@@ -1,0 +1,151 @@
+/**
+ * Certifications Section Editorial Styles
+ * Paper certificate cards with preview modal
+ */
+
+.certifications-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.editorial-cert-card {
+  background: #ffffff;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: var(--shadow-paper);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.editorial-cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-paper-elevated);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.cert-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.cert-issuer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-blue-tech);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.cert-date-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-dim);
+}
+
+.cert-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: var(--line-height-snug);
+  margin-bottom: 0.35rem;
+}
+
+.cert-credential-id {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-dim);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.cert-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: var(--line-height-normal);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+  flex: 1;
+}
+
+.cert-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.cert-inspect-btn {
+  font-size: 0.82rem;
+}
+
+.cert-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-blue-tech);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.cert-verify-link:hover {
+  color: var(--color-orange-warm);
+}
+
+/* Modal Certificate Preview Frame */
+.cert-preview-image-frame {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: #000000;
+  max-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-preview-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+}
+
+.cert-details-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  padding: 0.85rem 1.15rem;
+  background: var(--color-paper-secondary);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+@media (max-width: 960px) {
+  .certifications-editorial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certifications-editorial-grid {
+    grid-template-columns: 1fr;
+  }
+}

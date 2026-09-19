@@ -1,0 +1,258 @@
+/**
+ * Education Section Editorial Styles
+ * Clean timeline and architectural blueprint campus sketch
+ */
+
+.education-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--spacing-3xl);
+  align-items: flex-start;
+}
+
+/* Timeline Column */
+.education-timeline-col {
+  position: relative;
+}
+
+.education-timeline-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.education-timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-blue-tech) 0%, rgba(37, 99, 235, 0.2) 100%);
+}
+
+.education-timeline-node {
+  position: relative;
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.timeline-marker {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--color-blue-tech);
+  color: var(--color-blue-tech);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+.timeline-marker.marker-active {
+  background: var(--color-blue-tech);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.education-timeline-card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-paper);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.education-timeline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-paper-elevated);
+}
+
+.card-top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.education-institution-name {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.education-degree-text {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-blue-tech);
+  margin-top: 0.15rem;
+}
+
+.education-campus-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-dim);
+}
+
+.education-badge-cluster {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.education-period-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  background: var(--color-paper-secondary);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.education-grade-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-blue-tech);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.education-desc-text {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: var(--line-height-normal);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.education-focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* Campus Sketch Column */
+.education-sketch-col {
+  position: sticky;
+  top: 100px;
+}
+
+.campus-sketch-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(17, 24, 39, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-paper);
+  position: relative;
+}
+
+.sketch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed rgba(17, 24, 39, 0.15);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.sketch-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: 0.04em;
+}
+
+.sketch-coord {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-blue-tech);
+}
+
+.campus-photo-container {
+  margin-top: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: #f8fafc;
+  box-shadow: var(--shadow-subtle);
+}
+
+.campus-photo-img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.campus-photo-container:hover .campus-photo-img {
+  transform: scale(1.02);
+}
+
+.campus-photo-caption-bar {
+  padding: 0.45rem 0.75rem;
+  background: var(--color-paper-secondary);
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.campus-photo-caption {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-text-dim);
+  letter-spacing: 0.04em;
+}
+
+.campus-photo-coord {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-blue-tech);
+}
+
+.education-book-motif {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.book-quote-text {
+  font-family: var(--font-handwriting);
+  font-size: 1.15rem;
+  color: #1e3a5a;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .education-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .education-sketch-col {
+    position: static;
+  }
+}

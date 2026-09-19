@@ -1,0 +1,281 @@
+/**
+ * Currently Building Section Editorial Styles
+ * Technical blueprint aesthetic with engineering graph lines and glowing circuitry
+ */
+
+.blueprint-container {
+  position: relative;
+}
+
+.blueprint-card {
+  background: rgba(11, 27, 43, 0.85);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(12px);
+  position: relative;
+}
+
+/* Blueprint Top Bar */
+.blueprint-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(56, 189, 248, 0.25);
+  padding-bottom: 1rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.blueprint-id-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-blue-sky);
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.blueprint-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #f97316;
+  box-shadow: 0 0 10px #f97316;
+  animation: blueprintPulseAnim 1.8s infinite;
+}
+
+@keyframes blueprintPulseAnim {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Content Grid: Left Blueprint Sketch, Right Milestones */
+.blueprint-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+/* Left Sketch Pane */
+.blueprint-sketch-pane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.blueprint-sketch-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+}
+
+.blueprint-handwritten-note {
+  position: absolute;
+  top: -24px;
+  left: 20px;
+  font-family: var(--font-handwriting);
+  font-size: 1.3rem;
+  color: var(--color-yellow-accent);
+  transform: rotate(-3deg);
+  z-index: 2;
+  user-select: none;
+}
+
+.blueprint-device-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.4));
+}
+
+/* Right Milestones Pane */
+.blueprint-milestones-pane {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestones-heading {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--spacing-md);
+}
+
+.milestones-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  position: relative;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: 0.75rem 1rem;
+  background: rgba(16, 35, 56, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.milestone-item:hover {
+  background: rgba(16, 35, 56, 0.9);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.milestone-item.milestone-active {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: var(--color-blue-sky);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.15);
+}
+
+.milestone-status-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: var(--color-blue-sky);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.milestone-completed .milestone-status-icon {
+  background: #059669;
+  border-color: #059669;
+  color: #ffffff;
+}
+
+.milestone-active .milestone-status-icon {
+  background: var(--color-blue-tech);
+  border-color: var(--color-blue-sky);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.milestone-number {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.milestone-text-group {
+  flex: 1;
+}
+
+.milestone-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  margin-bottom: 0.2rem;
+}
+
+.milestone-title {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.milestone-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.milestone-badge--completed {
+  background: rgba(5, 150, 105, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+
+.milestone-badge--in-progress {
+  background: rgba(249, 115, 22, 0.2);
+  color: #fb923c;
+  border: 1px solid rgba(251, 146, 60, 0.4);
+}
+
+.milestone-badge--upcoming {
+  background: rgba(148, 163, 184, 0.1);
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.milestone-desc {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Blueprint Progress Footer */
+.blueprint-progress-footer {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px dashed rgba(56, 189, 248, 0.25);
+}
+
+.progress-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.progress-stage-name {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #e2e8f0;
+}
+
+.progress-percentage-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-blue-sky);
+  font-weight: 600;
+}
+
+.progress-track-bar {
+  width: 100%;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.progress-fill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+@media (max-width: 960px) {
+  .blueprint-content-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .blueprint-handwritten-note {
+    position: static;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+}
