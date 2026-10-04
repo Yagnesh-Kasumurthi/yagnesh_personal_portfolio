@@ -17,7 +17,88 @@ export const ProjectVisual: React.FC<ProjectVisualProps> = ({ category, title, i
     );
   }
 
-  // 1. Assistive Communication Device
+  // 1. YCPU-8 Processor Architecture (VLSI / Digital Design)
+  if (
+    category.toLowerCase().includes('vlsi') ||
+    title.toLowerCase().includes('ycpu') ||
+    title.toLowerCase().includes('processor')
+  ) {
+    return (
+      <svg viewBox="0 0 400 240" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" className="project-visual-svg">
+        <rect width="400" height="240" fill="#0b1b2b" />
+        <pattern id="cpuGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(56, 189, 248, 0.08)" strokeWidth="0.8" />
+        </pattern>
+        <rect width="400" height="240" fill="url(#cpuGrid)" />
+
+        {/* Outer IC Chip Outline */}
+        <rect x="35" y="28" width="330" height="174" rx="10" fill="#07121d" stroke="#38bdf8" strokeWidth="1.6" />
+
+        {/* IC Pin notches - top and bottom */}
+        <rect x="75" y="22" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="115" y="22" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="155" y="22" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="235" y="22" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="275" y="22" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="315" y="22" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+
+        <rect x="75" y="202" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="115" y="202" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="155" y="202" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="235" y="202" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="275" y="202" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+        <rect x="315" y="202" width="12" height="6" rx="1.5" fill="#38bdf8" opacity="0.8" />
+
+        {/* 1. Program Counter & Control Unit (Left Block) */}
+        <rect x="52" y="44" width="86" height="52" rx="5" fill="#0f1f33" stroke="#0ea5e9" strokeWidth="1.2" />
+        <text x="95" y="62" textAnchor="middle" fill="#38bdf8" fontFamily="'JetBrains Mono', monospace" fontSize="8" fontWeight="700">PROGRAM CNTR</text>
+        <rect x="65" y="70" width="60" height="18" rx="3" fill="#07121d" stroke="#38bdf8" strokeWidth="0.8" />
+        <text x="95" y="82" textAnchor="middle" fill="#f97316" fontFamily="'JetBrains Mono', monospace" fontSize="9" fontWeight="700">PC [7:0]</text>
+
+        <rect x="52" y="106" width="86" height="58" rx="5" fill="#0f1f33" stroke="#0ea5e9" strokeWidth="1.2" />
+        <text x="95" y="124" textAnchor="middle" fill="#38bdf8" fontFamily="'JetBrains Mono', monospace" fontSize="8" fontWeight="700">CONTROL UNIT</text>
+        <text x="95" y="137" textAnchor="middle" fill="#94a3b8" fontFamily="'JetBrains Mono', monospace" fontSize="7">OPCODE DECODER</text>
+        <rect x="62" y="143" width="66" height="14" rx="2" fill="#07121d" />
+        <text x="95" y="153" textAnchor="middle" fill="#38bdf8" fontFamily="'JetBrains Mono', monospace" fontSize="7">CTRL SIGNALS</text>
+
+        {/* Bus Interconnect / Arrow Lines */}
+        <line x1="138" y1="70" x2="160" y2="70" stroke="#38bdf8" strokeWidth="1.5" strokeDasharray="3 2" />
+        <line x1="138" y1="135" x2="160" y2="135" stroke="#f97316" strokeWidth="1.5" />
+
+        {/* 2. Register Bank Block (Center) */}
+        <rect x="160" y="44" width="80" height="120" rx="5" fill="#0f1f33" stroke="#38bdf8" strokeWidth="1.2" />
+        <text x="200" y="59" textAnchor="middle" fill="#38bdf8" fontFamily="'JetBrains Mono', monospace" fontSize="8" fontWeight="700">REG BANK</text>
+        <rect x="168" y="67" width="64" height="18" rx="3" fill="#07121d" stroke="#1e293b" strokeWidth="1" />
+        <text x="200" y="80" textAnchor="middle" fill="#94a3b8" fontFamily="'JetBrains Mono', monospace" fontSize="8">R0: 8-BIT</text>
+        <rect x="168" y="90" width="64" height="18" rx="3" fill="#07121d" stroke="#1e293b" strokeWidth="1" />
+        <text x="200" y="103" textAnchor="middle" fill="#94a3b8" fontFamily="'JetBrains Mono', monospace" fontSize="8">R1: 8-BIT</text>
+        <rect x="168" y="113" width="64" height="18" rx="3" fill="#07121d" stroke="#1e293b" strokeWidth="1" />
+        <text x="200" y="126" textAnchor="middle" fill="#94a3b8" fontFamily="'JetBrains Mono', monospace" fontSize="8">R2: 8-BIT</text>
+        <rect x="168" y="136" width="64" height="18" rx="3" fill="#07121d" stroke="#1e293b" strokeWidth="1" />
+        <text x="200" y="149" textAnchor="middle" fill="#94a3b8" fontFamily="'JetBrains Mono', monospace" fontSize="8">R3: 8-BIT</text>
+
+        {/* Bus from Registers to ALU */}
+        <line x1="240" y1="80" x2="265" y2="80" stroke="#38bdf8" strokeWidth="1.5" />
+        <line x1="240" y1="130" x2="265" y2="130" stroke="#38bdf8" strokeWidth="1.5" />
+
+        {/* 3. 8-Bit ALU (Right Block) */}
+        <polygon points="265,52 345,68 345,142 265,158 265,115 275,105 265,95" fill="#0f1f33" stroke="#38bdf8" strokeWidth="1.4" />
+        <text x="306" y="95" textAnchor="middle" fill="#38bdf8" fontFamily="'JetBrains Mono', monospace" fontSize="10" fontWeight="700">8-BIT</text>
+        <text x="306" y="110" textAnchor="middle" fill="#38bdf8" fontFamily="'JetBrains Mono', monospace" fontSize="10" fontWeight="700">ALU</text>
+        <text x="306" y="125" textAnchor="middle" fill="#f97316" fontFamily="'JetBrains Mono', monospace" fontSize="7" fontWeight="600">JZ / FLAGS</text>
+
+        {/* ALU Output bus feedback */}
+        <path d="M 345 105 L 358 105 L 358 180 L 200 180 L 200 164" fill="none" stroke="#38bdf8" strokeWidth="1.4" strokeDasharray="3 2" />
+
+        {/* Bottom Technical Label */}
+        <text x="200" y="222" textAnchor="middle" fill="#94a3b8" fontFamily="'JetBrains Mono', monospace" fontSize="9" fontWeight="600" letterSpacing="0.08em">
+          YCPU-8 // 8-BIT PROCESSOR ARCHITECTURE • VERILOG HDL
+        </text>
+      </svg>
+    );
+  }
+
+  // 2. Assistive Communication Device
   if (
     category.toLowerCase().includes('assistive') ||
     title.toLowerCase().includes('assistive') ||
