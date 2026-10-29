@@ -1,7 +1,6 @@
 import React from 'react';
-import { Lightbulb } from 'lucide-react';
+import { Quote, Sparkles } from 'lucide-react';
 import { SectionHeader } from '../ui/SectionHeader';
-import { profileData } from '../../data';
 import './About.css';
 
 export const About: React.FC = () => {
@@ -61,49 +60,122 @@ export const About: React.FC = () => {
                   <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" fill="#F97316" />
                 </svg>
               </div>
-              <span className="signature-caption">Curiosity today &bull; Innovation tomorrow</span>
+              <span className="signature-caption">ECE Undergrad &bull; SRM IST</span>
             </div>
           </div>
 
-          {/* Right Column: Editorial Portrait with Sticky Tape & Quote */}
-          <div className="about-visual-col">
-            <div className="about-poster-composition">
-              {/* Handwritten Note Above Frame */}
-              <div className="about-top-note" aria-hidden="true">
-                <span>Same Person, Bigger Goals :)</span>
+          {/* Right Column: Editorial Typography Composition (Inspirational Quotes) */}
+          <div className="about-visual-col" aria-label="Inspirational Quotes & Engineering Mindset">
+            <div className="about-quotes-board">
+              {/* Subtle Ambient Wash Backdrop */}
+              <div className="quotes-ambient-wash" aria-hidden="true" />
+
+              {/* Technical Registration Marker */}
+              <div className="quotes-corner-marker top-left" aria-hidden="true">+</div>
+              <div className="quotes-corner-marker bottom-right" aria-hidden="true">+</div>
+
+              {/* Top Annotation */}
+              <div className="quotes-top-annotation" aria-hidden="true">
+                <span className="annotation-handwritten-text">Engineering Mindset</span>
+                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" className="annotation-sketch-curve">
+                  <path d="M 2 3 C 12 5, 20 8, 24 15 M 18 15 L 24 15 L 24 9" stroke="#1e3a5a" strokeWidth="1.5" strokeLinecap="round" />
+                </svg>
               </div>
 
-              {/* Blue Brush Splash Behind */}
-              <div className="about-blue-wash" aria-hidden="true" />
-
-              {/* Portrait Frame with Clean Straight Facing Photo */}
-              <div className="about-portrait-card">
-                <img
-                  src={profileData.photoUrl}
-                  alt="Yagnesh Kasumurthi - Profile"
-                  className="about-portrait-img"
-                  width={340}
-                  height={380}
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Taped Quote Card */}
-              <div className="about-quote-card">
+              {/* ========================================================
+               * Quote 1: "Build. Learn. Improve. Repeat."
+               * Style: Elegant handwritten script font, deep navy blue, distinctive visual arrangement
+               * ======================================================== */}
+              <div className="quote-panel quote-panel-loop">
                 <div className="tape-strip" aria-hidden="true" />
-                <div className="quote-icon-box" aria-hidden="true">
-                  <Lightbulb size={18} color="#F97316" />
+
+                <div className="quote-panel-meta">
+                  <span className="quote-kicker-mono">THE ITERATION LOOP // 01</span>
+                  <span className="quote-badge-pill">MANIFESTO</span>
                 </div>
-                <p className="quote-text">
-                  &ldquo;Technology is most powerful when it includes everyone.&rdquo;
-                </p>
+
+                <div className="quote-script-cascade" aria-label="Build. Learn. Improve. Repeat.">
+                  <div className="script-cascade-row">
+                    <span className="step-num-pill">01</span>
+                    <span className="script-word">Build.</span>
+                    <span className="script-arrow" aria-hidden="true">&rarr;</span>
+                    <span className="step-num-pill">02</span>
+                    <span className="script-word">Learn.</span>
+                  </div>
+                  <div className="script-cascade-row secondary-row">
+                    <span className="step-num-pill">03</span>
+                    <span className="script-word">Improve.</span>
+                    <span className="script-arrow" aria-hidden="true">&rarr;</span>
+                    <span className="step-num-pill">04</span>
+                    <span className="script-word">Repeat.</span>
+                    <span className="script-cycle-symbol" aria-hidden="true" title="Continuous cycle">&#8635;</span>
+                  </div>
+                </div>
+
+                <div className="quote-panel-footnote">
+                  <span className="footnote-divider" aria-hidden="true" />
+                  <span className="footnote-label">Continuous feedback &bull; Relentless refinement</span>
+                </div>
               </div>
 
-              {/* Floating Competencies Mini Tag */}
-              <div className="about-floating-tags" aria-hidden="true">
-                <span className="mini-tag">AI/ML</span>
-                <span className="mini-tag">VLSI Design</span>
-                <span className="mini-tag">Edge AI</span>
+              {/* ========================================================
+               * Quote 2: "Technology is most powerful when it includes everyone."
+               * Style: Refined serif typography, dark charcoal or deep blue, subtle orange accent
+               * ======================================================== */}
+              <div className="quote-panel quote-panel-mission">
+                <div className="quote-mission-accent-box" aria-hidden="true">
+                  <Quote size={20} className="quote-mission-icon" />
+                </div>
+
+                <div className="quote-panel-meta">
+                  <span className="quote-kicker-mono">ETHOS // 02</span>
+                  <span className="mission-orange-dot" aria-hidden="true" />
+                </div>
+
+                <blockquote className="quote-serif-statement">
+                  &ldquo;Technology is most powerful when it <span className="quote-orange-highlight">includes everyone.</span>&rdquo;
+                </blockquote>
+
+                <div className="quote-panel-footnote">
+                  <span className="footnote-divider" aria-hidden="true" />
+                  <span className="footnote-label">Human-Centered Systems &bull; Inclusive Innovation</span>
+                </div>
+              </div>
+
+              {/* ========================================================
+               * Quote 3: "Curiosity today. Innovations tomorrow."
+               * Style: Modern, bold typography, tasteful blue or golden-yellow accent
+               * ======================================================== */}
+              <div className="quote-panel quote-panel-vision">
+                <div className="quote-vision-sparkle" aria-hidden="true">
+                  <Sparkles size={16} />
+                </div>
+
+                <div className="quote-panel-meta">
+                  <span className="quote-kicker-mono vision-kicker">VISION // 03</span>
+                  <span className="vision-horizon-badge">HORIZON</span>
+                </div>
+
+                <div className="quote-bold-statement">
+                  <p className="bold-line-curiosity">Curiosity today.</p>
+                  <p className="bold-line-innovation">
+                    Innovations tomorrow<span className="bold-yellow-period">.</span>
+                  </p>
+                </div>
+
+                <div className="vision-tags-row">
+                  <span className="vision-spec-tag">AI/ML</span>
+                  <span className="vision-bullet">&bull;</span>
+                  <span className="vision-spec-tag">VLSI</span>
+                  <span className="vision-bullet">&bull;</span>
+                  <span className="vision-spec-tag">Edge AI</span>
+                </div>
+              </div>
+
+              {/* Bottom Subtle Blueprint Coordinates */}
+              <div className="quotes-board-footer" aria-hidden="true">
+                <span className="quotes-mono-ref">REF // SRM_IST_ECE_STUDIO</span>
+                <span className="quotes-plus-mark">+</span>
               </div>
             </div>
           </div>
