@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
             <a href="#about" className="footer-nav-link">About</a>
             <a href="#education" className="footer-nav-link">Education</a>
             <a href="#projects" className="footer-nav-link">Projects</a>
-            <a href="#currently-building" className="footer-nav-link">Building</a>
+            <a href="#journal" className="footer-nav-link">Journal</a>
             <a href="#skills" className="footer-nav-link">Skills</a>
             <a href="#certifications" className="footer-nav-link">Certifications</a>
             <a href="#contact" className="footer-nav-link">Contact</a>

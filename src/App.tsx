@@ -5,7 +5,7 @@ import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
 import { Education } from './components/sections/Education';
 import { Projects } from './components/sections/Projects';
-import { CurrentlyBuilding } from './components/sections/CurrentlyBuilding';
+import { Journal } from './components/sections/Journal';
 import { Skills } from './components/sections/Skills';
 import { Certifications } from './components/sections/Certifications';
 import { Activities } from './components/sections/Activities';
@@ -32,8 +32,8 @@ export const App: React.FC = () => {
         {/* 5. 03. Projects Showcase */}
         <Projects />
 
-        {/* 6. 04. Currently Building (Blueprint) */}
-        <CurrentlyBuilding />
+        {/* 6. 04. Engineering Journal */}
+        <Journal />
 
         {/* 7. 05. Skills Matrix */}
         <Skills />

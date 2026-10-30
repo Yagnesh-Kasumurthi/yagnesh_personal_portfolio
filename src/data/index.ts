@@ -6,3 +6,4 @@ export * from './languages';
 export * from './activities';
 export * from './hobbies';
 export * from './socials';
+export * from './journal';

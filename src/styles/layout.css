@@ -88,17 +88,16 @@
   background-size: 40px 40px;
 }
 
-/* 5. Currently Building Section: Dark Navy Technical Blueprint / Notebook */
-.section-currently-building {
-  background-color: var(--color-primary-navy);
-  color: var(--color-text-light);
+/* 5. Engineering Journal Section: Warm paper + subtle engineering paper grid */
+.section-journal {
+  background-color: #faf7f2;
   background-image: 
-    linear-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.12) 1px, transparent 1px),
-    linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(37, 99, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(17, 24, 39, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.015) 1px, transparent 1px);
   background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
 }
 
 /* 6. Skills Section: Warm paper background with dark navy cards */

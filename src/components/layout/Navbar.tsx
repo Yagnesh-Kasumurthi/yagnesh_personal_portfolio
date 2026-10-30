@@ -12,7 +12,7 @@ const navItems: NavItem[] = [
   { label: 'About', href: '#about', id: 'about' },
   { label: 'Education', href: '#education', id: 'education' },
   { label: 'Projects', href: '#projects', id: 'projects' },
-  { label: 'Currently Building', href: '#currently-building', id: 'currently-building' },
+  { label: 'Journal', href: '#journal', id: 'journal' },
   { label: 'Skills', href: '#skills', id: 'skills' },
   { label: 'Certifications', href: '#certifications', id: 'certifications' },
   { label: 'Contact', href: '#contact', id: 'contact' },

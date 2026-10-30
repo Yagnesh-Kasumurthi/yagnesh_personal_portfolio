@@ -164,6 +164,52 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
           </div>
         )}
 
+        {/* Development Milestones Historical Record */}
+        {project.milestones && project.milestones.length > 0 && (
+          <div>
+            <h4 style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-text-dark)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+              Development Milestones (Development Record)
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              {project.milestones.map((m) => (
+                <div
+                  key={m.num}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '0.75rem',
+                    padding: '0.6rem 0.85rem',
+                    backgroundColor: 'var(--color-paper-secondary)',
+                    borderRadius: 'var(--radius-sm)',
+                    border: '1px solid rgba(17, 24, 39, 0.08)'
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      color: 'var(--color-blue-tech)',
+                      backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                      padding: '0.15rem 0.45rem',
+                      borderRadius: '4px'
+                    }}
+                  >
+                    {m.num}
+                  </span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.2rem' }}>
+                      <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>{m.title}</span>
+                      <span className="status-pill status-pill--completed" style={{ fontSize: '0.65rem', padding: '0.1rem 0.45rem' }}>{m.status}</span>
+                    </div>
+                    <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--color-text-muted)', lineHeight: 1.4 }}>{m.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Technical Highlights Note */}
         <div style={{
           backgroundColor: 'var(--color-paper-secondary)',

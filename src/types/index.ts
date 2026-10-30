@@ -29,9 +29,20 @@ export interface Project {
   challenges?: string;
   futureImprovements?: string;
   
+  // Milestone development record
+  milestones?: Array<{
+    num: string;
+    title: string;
+    desc: string;
+    status: 'Completed' | 'In Progress' | 'Upcoming' | string;
+    completed?: boolean;
+  }>;
+  
   // Flag indicating if this project is featured in "Currently Building" spotlight
   currentlyBuilding?: boolean;
 }
+
+export * from './journal';
 
 export interface OngoingProjectDetails {
   projectId: string;

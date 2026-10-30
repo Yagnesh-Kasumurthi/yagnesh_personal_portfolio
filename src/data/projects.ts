@@ -68,25 +68,36 @@ export const projectsData: Project[] = [
     id: 'tachometer-vibration-fault-detection',
     title: 'Tachometer with Vibration Analysis and Fault Detection',
     shortDescription: 'An embedded system for measuring rotational speed and analyzing machine vibrations to identify abnormal vibration patterns and support fault detection.',
-    status: 'In Progress',
+    detailedDescription: 'An embedded instrumentation system designed to capture rotational speed (RPM) and simultaneously monitor mechanical vibration signals. By analyzing rotational frequency alongside vibration waveform dynamics, the system assists in identifying abnormal vibration patterns to support proactive equipment diagnostics and fault detection.',
+    status: 'Completed',
     category: 'Embedded / Hardware',
-    technologies: [],
-    currentlyBuilding: true,
+    technologies: ['Embedded C', 'Hardware Prototyping', 'Vibration Sensing', 'RPM Measurement'],
+    objective: 'Design and implement an embedded system for measuring rotational speed and analyzing machine vibrations to identify abnormal operating patterns and facilitate early fault detection.',
+    architecture: 'Hardware architecture comprising a rotational speed sensor, vibration transducer, signal conditioning electronics, and an embedded microcontroller unit handling speed calculation and vibration signal acquisition.',
+    implementation: 'Interfaced tachometer sensing elements with embedded processing routines. Implemented frequency counting for RPM determination and captured vibration telemetry to analyze rotational stability and signal deviations.',
+    challenges: 'Minimizing signal noise in the vibration acquisition path during high-speed rotation and synchronizing optical RPM pulses with analog vibration sampling without dropped cycles.',
+    futureImprovements: 'Integrating edge FFT computation for spectral frequency domain analysis and implementing wireless telemetry transmission for remote industrial monitoring.',
+    milestones: [
+      { num: '01', title: 'System Architecture', desc: 'Defining RPM measurement & vibration sensing framework', status: 'Completed', completed: true },
+      { num: '02', title: 'Hardware Prototyping', desc: 'Tachometer sensor interfacing and vibration signal acquisition', status: 'Completed', completed: true },
+      { num: '03', title: 'Vibration Signal Analysis', desc: 'Processing vibration data to detect unwanted and abnormal patterns', status: 'Completed', completed: true },
+      { num: '04', title: 'Fault Detection Testing', desc: 'Characterizing abnormal vibration behavior for early fault detection', status: 'Completed', completed: true },
+      { num: '05', title: 'System Integration', desc: 'Validation and experimental evaluation under rotational loads', status: 'Completed', completed: true },
+    ],
+    currentlyBuilding: false,
   },
 ];
 
 /**
- * Detailed spotlight architecture for the "Currently Building" section.
- * This structure decouples live progress updates, stages, and hardware/software
- * integration notes from the main project card list.
+ * Detailed spotlight architecture for legacy reference.
  */
 export const ongoingProjectsData: Record<string, OngoingProjectDetails> = {
   'tachometer-vibration-fault-detection': {
     projectId: 'tachometer-vibration-fault-detection',
-    currentStage: 'Under active research & prototyping',
-    hardware: [],
-    software: [],
-    architectureOverview: '',
+    currentStage: 'Completed',
+    hardware: ['RPM Sensor', 'Vibration Transducer', 'Microcontroller Unit'],
+    software: ['Embedded C', 'Pulse Acquisition Firmware'],
+    architectureOverview: 'Rotational speed measurement combined with vibration signal acquisition for fault detection.',
     developmentUpdates: [],
     futureMilestones: [],
   },
